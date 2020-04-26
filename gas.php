@@ -21,12 +21,12 @@ $bearer = $login['access_token'];
 $id = $tri->trans($bearer);
 $id = json_decode($id,true);
 $id = $id['data'][0]['rewardTransactionId'];
-for($id1 = 0; $id1 < 3;$id1++)
-{
+
+
   $gas = $tri->claim($bearer,$id,$id1);
   echo $gas . "\r\n";
   sleep(2);
-}
+
 
 
 ?>
